@@ -1,0 +1,17 @@
+{
+  "name": "core-js-3-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hadrien <hadrien.tulipe@webedia-group.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib/ && yarn build:wt && yarn build:wot",
+    "build:wt": "babel src -o lib/with-targets.js --config-file=./config-with-targets.js",
+    "build:wot": "babel src -o lib/without-targets.js --config-file=./config-without-targets.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
+  }
+}
